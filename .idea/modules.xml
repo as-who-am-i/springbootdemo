@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hadoop.iml" filepath="$PROJECT_DIR$/Hadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hdfsDemo/hdfsDemo.iml" filepath="$PROJECT_DIR$/hdfsDemo/hdfsDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mrDemo/mrDemo.iml" filepath="$PROJECT_DIR$/mrDemo/mrDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootdemo/springbootdemo.iml" filepath="$PROJECT_DIR$/springbootdemo/springbootdemo.iml" />
+    </modules>
+  </component>
+</project>
