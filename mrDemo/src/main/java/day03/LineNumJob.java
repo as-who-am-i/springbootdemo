@@ -67,7 +67,7 @@ public class LineNumJob {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Configuration configuration = new Configuration();
-        configuration.addResource(Resources.getResource("core-site.xml"));
+        configuration.addResource(Resources.getResource("core-site-remote.xml"));
         Job job = Job.getInstance(configuration, "HW");
 
         //设置job的运行类
