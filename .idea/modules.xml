@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hadoop.iml" filepath="$PROJECT_DIR$/Hadoop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HbaseTest/HbaseTest.iml" filepath="$PROJECT_DIR$/HbaseTest/HbaseTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HiveDemo/HiveDemo.iml" filepath="$PROJECT_DIR$/HiveDemo/HiveDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HiveJDBC/HiveJDBC.iml" filepath="$PROJECT_DIR$/HiveJDBC/HiveJDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/hdfsDemo/hdfsDemo.iml" filepath="$PROJECT_DIR$/hdfsDemo/hdfsDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/mrDemo/mrDemo.iml" filepath="$PROJECT_DIR$/mrDemo/mrDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootdemo/springbootdemo.iml" filepath="$PROJECT_DIR$/springbootdemo/springbootdemo.iml" />

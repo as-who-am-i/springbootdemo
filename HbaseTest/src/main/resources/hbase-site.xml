@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+        configuration.set("hbase.zookeeper.property.clientPort", "2181");
+        configuration.set("hbase.zookeeper.quorum", "192.168.186.111");
+        configuration.set("hbase.master", "192.168.186.111:60001");-->
+<configuration>
+    <property>
+        <name>hbase.zookeeper.quorum</name>
+        <value>192.168.186.111</value>
+    </property>
+
+    <property>
+        <name>hbase.zookeeper.property.clientPort</name>
+        <value>2181</value>
+    </property>
+
+    <property>
+        <name>hbase.master</name>
+        <value>192.168.186.111:60001</value>
+    </property>
+</configuration>

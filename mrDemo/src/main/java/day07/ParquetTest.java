@@ -73,6 +73,7 @@ public class ParquetTest {
                         .append("status", strs[4])
                         .append("port", strs[5]);
                 writer.write(group);
+
             }
         }
         System.out.println("write end");

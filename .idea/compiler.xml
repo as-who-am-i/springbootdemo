@@ -6,13 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="HbaseTest" />
         <module name="hdfsDemo" />
+        <module name="HiveDemo" />
+        <module name="HiveJDBC" />
         <module name="mrDemo" />
         <module name="springbootdemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="HbaseTest" target="1.5" />
       <module name="hdfsDemo" target="1.5" />
+      <module name="HiveDemo" target="1.5" />
+      <module name="HiveJDBC" target="1.5" />
       <module name="mrDemo" target="1.5" />
       <module name="rdDemo" target="1.5" />
       <module name="springbootdemo" target="1.8" />
