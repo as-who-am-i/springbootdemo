@@ -11,6 +11,7 @@
         <module name="HiveDemo" />
         <module name="HiveJDBC" />
         <module name="mrDemo" />
+        <module name="PhoenixTest" />
         <module name="springbootdemo" />
       </profile>
     </annotationProcessing>
@@ -20,6 +21,7 @@
       <module name="HiveDemo" target="1.5" />
       <module name="HiveJDBC" target="1.5" />
       <module name="mrDemo" target="1.5" />
+      <module name="PhoenixTest" target="1.5" />
       <module name="rdDemo" target="1.5" />
       <module name="springbootdemo" target="1.8" />
     </bytecodeTargetLevel>

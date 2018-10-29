@@ -1,4 +1,4 @@
-package com;
+package com.day01;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -40,45 +40,29 @@ public class AliShowHbase {
     static Configuration conf;
 
     static {
-
         conf = HBaseConfiguration.create();
-
         conf.set("hbase.zookeeper.quorum", "192.168.186.111");
 
         try {
-
             hBaseAdmin = new HBaseAdmin(conf);
-
         } catch (MasterNotRunningException e) {
-
             e.printStackTrace();
-
         } catch (ZooKeeperConnectionException e) {
-
             e.printStackTrace();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     public static void createTable(String tableName, String[] columns) throws Exception {
-
         dropTable(tableName);
-
         HTableDescriptor hTableDescriptor = new HTableDescriptor(tableName);
-
         for (String columnName : columns) {
-
             HColumnDescriptor column = new HColumnDescriptor(columnName);
-
             hTableDescriptor.addFamily(column);
-
         }
 
         hBaseAdmin.createTable(hTableDescriptor);
-
         System.out.println("create table successed");
 
     }
@@ -86,11 +70,8 @@ public class AliShowHbase {
     public static void dropTable(String tableName) throws Exception {
 
         if (hBaseAdmin.tableExists(tableName)) {
-
             hBaseAdmin.disableTable(tableName);
-
             hBaseAdmin.deleteTable(tableName);
-
         }
 
         System.out.println("drop table successed");
@@ -106,25 +87,18 @@ public class AliShowHbase {
     public static void insert(String tableName, Map<String, String> map) throws Exception {
 
         HTable hTable = getHTable(tableName);
-
         byte[] row1 = Bytes.toBytes(rowKey);
-
         Put p1 = new Put(row1);
 
         for (String columnName : map.keySet()) {
 
             byte[] value = Bytes.toBytes(map.get(columnName));
-
             String[] str = columnName.split(":");
-
             byte[] family = Bytes.toBytes(str[0]);
-
             byte[] qualifier = null;
 
             if (str.length > 1) {
-
                 qualifier = Bytes.toBytes(str[1]);
-
             }
 
             p1.add(family, qualifier, value);
@@ -132,13 +106,10 @@ public class AliShowHbase {
         }
 
         hTable.put(p1);
-
         Get g1 = new Get(row1);
-
         Result result = hTable.get(g1);
 
         System.out.println("Get: " + result);
-
         System.out.println("insert successed");
 
     }
@@ -150,9 +121,7 @@ public class AliShowHbase {
         List<Delete> list = new ArrayList<Delete>();
 
         Delete d1 = new Delete(Bytes.toBytes(rowKey));
-
         list.add(d1);
-
         hTable.delete(list);
 
         Get g1 = new Get(Bytes.toBytes(rowKey));
@@ -160,7 +129,6 @@ public class AliShowHbase {
         Result result = hTable.get(g1);
 
         System.out.println("Get: " + result);
-
         System.out.println("delete successed");
 
     }
@@ -241,7 +209,7 @@ public class AliShowHbase {
 
         String tableName = "tableTest";
 
-        /*String[] columns = new String[]{"column_A", "column_B"};
+        String[] columns = new String[]{"column_A", "column_B"};
 
         createTable(tableName, columns);
 
@@ -253,15 +221,15 @@ public class AliShowHbase {
 
         map.put("column_B:2", "b2");
 
-        insert(tableName, map);*/
+        insert(tableName, map);
 
-        //selectOne(tableName, rowKey);
+        selectOne(tableName, rowKey);
 
         selectAll(tableName);
 
-        //delete(tableName, rowKey);
+        delete(tableName, rowKey);
 
-        //dropTable(tableName);
+        dropTable(tableName);
 
     }
 }

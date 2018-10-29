@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HIVE2 - !connect jdbc:hive2://192.168.186.111:10000" uuid="3993d58f-61af-49c6-b474-d6391b1c6e53">
-      <driver-ref>java.sql.Driver</driver-ref>
+    <data-source source="LOCAL" name="single" uuid="b2a67793-2b41-4719-87e4-a5d641a97520">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>
-      <jdbc-driver>org.apache.hive.jdbc.HiveDriver</jdbc-driver>
-      <jdbc-url>!connect jdbc:hive2://192.168.186.111:10000</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://192.168.186.111:3306/test</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="Phoenix - jdbc:phoenix:192.168.186.111:2181" uuid="aa618be8-8077-4292-b6d1-661457ee50c6">
+      <driver-ref>52d07c8d-4915-4804-98b7-1ecaf9cfdece</driver-ref>
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>org.apache.phoenix.jdbc.PhoenixDriver</jdbc-driver>
+      <jdbc-url>jdbc:phoenix:192.168.186.111:2181</jdbc-url>
     </data-source>
   </component>
 </project>

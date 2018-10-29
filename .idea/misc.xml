@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/HiveDemo/pom.xml" />
         <option value="$PROJECT_DIR$/HiveJDBC/pom.xml" />
         <option value="$PROJECT_DIR$/HbaseTest/pom.xml" />
+        <option value="$PROJECT_DIR$/PhoenixTest/pom.xml" />
       </list>
     </option>
   </component>
